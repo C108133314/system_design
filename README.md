@@ -39,3 +39,7 @@ B109118301  | 鄧穎琳
 
 
 ## PERT/CPM圖
+![PERT/CPM圖](PERT-CPM.png "PERT/CPM圖")
+
+# 關鍵路徑
+1 - 2 - 4 - 6 - 9 - 11
