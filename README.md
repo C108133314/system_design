@@ -49,7 +49,7 @@ B109118301  | 鄧穎琳
 
   
 ## 甘特圖
-
+![甘特圖](gantt.png "甘特圖")
 
 ## PERT/CPM圖
 ![PERT/CPM圖](PERT-CPM.png "PERT/CPM圖")
