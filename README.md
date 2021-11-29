@@ -10,6 +10,45 @@ C108133314  | 簡鼎翰（組長）
 C108190147  | 劉昌儒
 B109118301  | 鄧穎琳
 
+# 作業五
+
+## 首頁
+![homepage](分鏡圖01.png "homepage")
+
+## 最新書籍推薦
+![newest](分鏡圖02.png "newest")
+
+## 熱門書籍推薦
+![popular](分鏡圖03.png "popular")
+
+## 登入
+![login](分鏡圖04.png "login")
+
+## 註冊
+![register](分鏡圖05.png "register")
+
+## 功能選單
+![menu](分鏡圖06.png "menu")
+
+## 新增分類
+![category](分鏡圖07.png "category")
+
+## 新增評價
+![review](分鏡圖08.png "review")
+
+## 所有書籍推薦
+![all](分鏡圖09.png "all")
+
+## 書籍資訊
+![detail1](分鏡圖10.png "detail1")
+
+## 書籍評價內容
+![detail2](分鏡圖11.png "detail2")
+
+## 留言區
+![comment](分鏡圖12.png "comment")
+
+
 # 作業四
 
 ## UML類別圖
