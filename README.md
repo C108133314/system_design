@@ -13,7 +13,7 @@ B109118301  | 鄧穎琳
 # 作業六
 
 ## 實體關係圖ERD
-![ERD](EDR.png "ERD")
+![ERD](ERD.png "ERD")
 
 # 作業五
 
