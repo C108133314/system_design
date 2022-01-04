@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+    .card {
+
+        margin-top: 20vh;
+        border-radius: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+<div class="container">
+
+    <div class="row">
+        <div class="col-11 col-md-9 mx-auto col-lg-5">
+            <div class="card">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+                    <h3>已經登入了喔!!</h3>
+                    <button class="btn btn-primary" onclick="location.assign('/log-out/')">登出</button>
+                    {% else %}
+                    <h3>登入</h3>
+                    <hr>
+                    <form action="/log-in/" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>帳號:</label>
+                            <input class="form-control" type="text" name=username>
+                        </div>
+                        <div class="form-group">
+                            <label>密碼:</label>
+                            <input class="form-control" type="password" name=password>
+                        </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <input type="submit" class="btn btn-primary">
+                            <p class="d-block m-0" style="color: red;">{{wrong}}</p>
+                        </div>
+
+                        {% endif %}
+                    </form>
+                    <button class="btn btn-primary mt-1"  onclick="location.assign('/register/')">註冊</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

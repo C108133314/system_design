@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:background="@drawable/bottomsheet_bg">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        >
+
+        <View android:id="@+id/rectangle_at_the_top"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray"
+            android:visibility="visible"
+            android:layout_marginHorizontal="165dp"
+            android:layout_marginTop="3dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/choosetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_detail"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintHorizontal_bias="0"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_cancel_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/product_img"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parduct_price"
+                    android:text="@string/sample"
+                    android:textSize="25sp"
+                    android:textColor="@color/orange"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parduct_title"
+                    android:text="@string/sample"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal">
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/numberpicker_main_picker"
+                        android:theme="@style/NumberPickerText"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/blue"
+                        android:id="@+id/add_item_to_cart"
+                        android:background="@drawable/add_to_cart_btn_bg"
+                        android:text="@string/add_to_cart"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prduct_infto"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintHorizontal_bias="0"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:paddingTop="3dp"
+            android:id="@+id/product_intro"
+            android:text="產品內容物與規格說明/保固資訊
+中文品名：ORIGINS 品木宣言 泥娃娃活性碳面膜(75ml)-國際航空版
+規格：75ml
+◆清潔毛孔油脂及汙垢
+◆毛孔深層淨化
+◆黑頭白頭粉刺剋星！
+
+★使用方式：臉部清潔後，適量塗抹於臉部肌膚，避開眼睛四周，可搭配按摩，靜候10分鐘後，再用清水洗淨。
+★保存方法：請置於陰涼處，請勿直接陽光照射，以免變質。
+☆溫馨提醒：
+✔本產品屬於私人消耗性產品，已拆封或使用過、無法恢復原狀、商品外盒損壞等均恕無法辦理退換貨。
+✔使用後若有過敏請即刻停止使用，並請教醫生。
+✔退貨時務必附回原完整商品、贈品、包裝外盒均齊全。
+✔商品建議下訂前先實際試色、試用後再購買，若因顏色不符或皮膚不適等症狀，恕不接受退換。
+✔個人電腦螢幕差異、照片拍攝關係造成色差，請以實際商品為準。"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suggest_goods"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/suggest_good_recyclerview"
+            android:overScrollMode="never"
+            android:paddingTop="3dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

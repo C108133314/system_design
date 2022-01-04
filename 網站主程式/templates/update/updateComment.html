@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+<style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5 col-7 mt-5">
+
+    <div class="col">
+
+        <h3>編輯留言</h3>
+        <form method="POST" action="/updateComment/{{ review.pk }}/{{ comment.pk }}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>內容</label>
+                <textarea class="tinymce" name="content" id="content"></textarea>
+            </div>
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary">送出</button>
+            </div>
+        </form>
+        <form action="/deleteComment/{{ review.pk }}/{{ comment.pk }}" method = "POST">
+            {% csrf_token %}
+            <button tyoe="submit" class="btn btn-danger mt-1">刪除</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+{% block js %}
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        height: "320px",
+        images_upload_url: '/upload_image/',
+        menubar: "file edit view insert format tools table help",
+        plugins: "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount spellchecker",
+        toolbar: " undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft " +
+            "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor " +
+            "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | " +
+            "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | " +
+            "a11ycheck ltr rtl | showcomments addcomment code",
+        custom_undo_redo_levels: 10,
+        relative_urls : false,
+        remove_script_host : false,
+        convert_urls : true,
+        setup: function (editor) {
+            editor.on('init', function (e) {
+                editor.setContent(`{{ comment.content|safe }}`);
+            });
+        }
+    });
+</script>
+{% endblock %}

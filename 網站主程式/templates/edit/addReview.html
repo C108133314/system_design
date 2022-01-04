@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class = "container py-5 col-7 mt-5">
+        
+        <div class = "col">
+            
+            <h3>新增書籍評價</h3>
+            <form action = "/add-Review/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>書籍名稱</label>
+                    <input type="text" class="form-control" name = "title">
+                </div>
+                <div class="form-group">
+                    <label>ISBN13</label>
+                    <input type="text" class="form-control" name="ISBNcode" placeholder="請輸入 ISBN13 碼" />
+                  </div>
+                  <div class="form-group">
+                    <label>作者</label>
+                    <input type="text" class="form-control" name="author" />
+                  </div>
+                  <div class="form-group">
+                    <label>出版商</label>
+                    <input type="text" class="form-control" name="publisher" />
+                  </div>
+                  <div class="form-group">
+                    <label>書籍分類</label>
+                    <select class="form-select" name="category">
+                      {% for i in categorylist %}
+                      <option value="{{ i.pk }}">{{ i.title }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>書籍封面上傳</label>
+                    <input class="form-control" type="file" name="img_file" />
+                  </div>
+                <div class="form-group">
+                    <label style = "display: inline-block;margin-right: 5px;">總體評價</label><label id = 'rating_score'>3</label>
+                    <input type="range" class="form-range" id = "rating" name = "rating" min="0" max="5">
+                </div>
+                <div class="form-group">
+                    <label>內容</label>
+                    <textarea class="tinymce" name = "content" id = "content"></textarea>
+                </div>
+                <div class = "form-group mt-2">
+                    <button type = "submit" class="btn btn-primary">送出</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock content %}
+{% block js %}
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        height: "320px",
+        images_upload_url : '/upload_image/',
+        /*
+        menubar: "file edit view insert format tools table help",
+        plugins: "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount spellchecker",
+        toolbar: " undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft " +
+        "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor " +
+        "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "+
+        "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | " +
+        "a11ycheck ltr rtl | showcomments addcomment code",
+        */
+       
+        plugins: "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount spellchecker",
+        toolbar: " undo redo | image media | fullscreen ",
+
+        content_style: 'img {max-width: 100%;max-height: 60vh;width:auto;height:auto;}',
+        
+        custom_undo_redo_levels: 10,
+        relative_urls : false,
+        remove_script_host : false,
+        convert_urls : true,
+     });
+     $("input#rating").change(function(){
+        $("label#rating_score").text(String($(this).val()) );
+     });
+</script>
+{% endblock %}

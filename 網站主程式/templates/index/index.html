@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">享。閱讀</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">書籍推薦討論系統<br>一起挖掘圖書館中的知識寶藏!!</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>了解更多</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets/img/book.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>關於我們</h3>
+              <h2>系統分析與設計第二組</h2>
+                <p class="my-3">
+                    劉昌儒 C108190147 <br>
+                    張文嫣 C108133242 <br>
+                    簡慶恩 C108133314 <br>
+                    徐惟厲 0631039   <br>
+                    鄧穎琳 B109119301<br>
+                    楊筑鈞 C108118201<br>
+
+                </p>
+            </div>
+          </div>
+          <!--
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>-->
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2></h2>
+        <p>最新書籍推薦</p>
+      </header>
+
+      <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper-wrapper">
+          {% for i in latest_review %}
+          <div class="swiper-slide">
+            <div class="testimonial-item" style = "height: 380px;cursor: pointer; " onclick = "location.assign('/reviewDetail/{{ i.pk }}')">
+              <img class="mx-auto mb-1" src="/media/{{ i.img }}" alt="Card image" style="width:180px;height:200px">
+
+              <p>
+                {{ i.shortContent }}...
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+          {% endfor %}
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- End Testimonials Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2></h2>
+      <p>熱門書籍推薦</p>
+    </header>
+
+    <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+        {% for i in hot_review %}
+        <div class="swiper-slide">
+          <div class="testimonial-item" style = "height: 380px;cursor: pointer; "  onclick = "location.assign('/reviewDetail/{{ i.pk }}')">
+            <img class="mx-auto mb-1" src="/media/{{ i.img }}" alt="Card image" style="width:180px;height:200px">
+
+            <p>
+              {{ i.shortContent }}...
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+        {% endfor %}
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

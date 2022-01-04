@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card-img-top{
+            border-radius: 5px;
+        }
+    </style>
+    <div class = "container py-5 col-11 col-lg-9 mt-5">
+        
+        <div class = "row">
+            <h3>所有書籍推薦</h3>
+            {% for i in review %}
+            <div class="col-12  col-md-6 col-lg-4" style = "padding: 15px;">
+                <div class="card mx-auto mx-md-0" style = "height: 100%;" onclick = "location.assign('/reviewDetail/{{ i.pk }}')">
+                    <img class="card-img-top mx-auto mt-3" src="/media/{{ i.img }}" alt="Card image" style="width:180px;height:200px">
+                    <div class="card-body">
+                      <h4 class="card-title text-center">{{ i.title }}</h4>
+                      <p class="card-text m-0">作者: {{ i.author }}</p>
+                      <p class="card-text m-0">出版商: {{ i.publisher }}</p>
+                      <p class="card-text">類別: {{ i.category }}</p>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock content %}

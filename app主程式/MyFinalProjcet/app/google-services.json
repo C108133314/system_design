@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "709395249094",
+    "project_id": "androidmidtermproject",
+    "storage_bucket": "androidmidtermproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709395249094:android:4aea0c4444b55129ba24c7",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709395249094-4b16ets0s6tk2s1ebui5soqnibmfm78i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt19NaEIiElfYpbDV8IdGssSuYlzxKP84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709395249094-4b16ets0s6tk2s1ebui5soqnibmfm78i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709395249094:android:e0f8ab8b615be667ba24c7",
+        "android_client_info": {
+          "package_name": "com.example.mymidtermproject2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709395249094-4b16ets0s6tk2s1ebui5soqnibmfm78i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt19NaEIiElfYpbDV8IdGssSuYlzxKP84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709395249094-4b16ets0s6tk2s1ebui5soqnibmfm78i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

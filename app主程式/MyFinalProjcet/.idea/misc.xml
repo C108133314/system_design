@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/drawable/bottomsheet_bg.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/drawable/ic_wave2.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/drawable/img_circle_shape.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/banner_vp_layout.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/bottomsheet_layout.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/custom_action_bar.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/fragment_card.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/fragment_collection_object.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/fragment_dashboard.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/fragment_product_card.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/login_layout.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/productdetail_dialog_layout.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/shopping_cart_item.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/shoppingcart.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyFinalProjcet/app/src/main/res/layout/suggest_vp_layout.xml" value="0.253125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.15625" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/add_to_cart_btn_bg.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/bottomsheet_bg.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/divider_blue.xml" value="0.38177083333333334" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.3758974358974359" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.15625" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.15625" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15625" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.3541666666666667" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_wave.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_wave2.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_wave3.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_wave4.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_wave7.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/ic_wave8.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/img_circle_shape.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/item_divider_layer.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/item_divider_style.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/searchbox_bg.xml" value="0.26927083333333335" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/drawable/selected_color.xml" value="0.3125" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/font/my_custom_font.xml" value="0.36256410256410254" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout-v28/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/banner_vp_layout.xml" value="0.2" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/bottomsheet_bg.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/bottomsheet_layout.xml" value="0.2" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/custom_action_bar.xml" value="0.35" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_card.xml" value="0.3359375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_collection_object.xml" value="0.365625" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_dashboard.xml" value="0.536" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_notifications.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_product.xml" value="0.33" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/fragment_product_card.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/login_layout.xml" value="0.4" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/productdetail_dialog_layout.xml" value="0.2" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/shopping_cart_item.xml" value="0.5" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/shoppingcart.xml" value="0.266304347826087" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/layout/suggest_vp_layout.xml" value="0.5" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2859375" />
+        <entry key="..\:/Users/jason/AndroidStudioProjects/MyMidtermProject2_copy/app/src/main/res/layout/suggest_vp_layout.xml" value="0.253125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

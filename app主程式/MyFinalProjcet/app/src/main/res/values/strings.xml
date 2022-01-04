@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">My Midterm Project 2</string>
+    <string name="title_home">首頁</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="user">會員專區</string>
+    <string name="my_wallet">我的錢包</string>
+
+    <string name="sale_category">促銷目錄</string>
+
+    <string name="my_share_code">我的分享碼</string>
+
+    <string name="payment_associate">聯名卡專區</string>
+
+    <string name="best_sale">暢銷書籍</string>
+
+    <string name="buy_one_get_one_free">第二件免費</string>
+
+    <string name="discount_for_second_one">第二件打折</string>
+
+    <string name="scan_code">掃碼購</string>
+    <string name="img">img</string>
+    <string name="suggest_goods">推薦商品</string>
+    <string name="sample">sample</string>
+    <string name="us">\u0024</string>
+    <string name="shopping_cart">我的購物車</string>
+    <string name="my_code">我的分享碼</string>
+    <string name="order_track">訂單查詢</string>
+    <string name="return_oder_track">退款退訂查詢</string>
+    <string name="my_order_target">我的最愛</string>
+    <string name="order_his">消費紀錄</string>
+    <string name="points_his">點數紀錄</string>
+    <string name="receipt">電子發票</string>
+    <string name="profile">個人資料</string>
+    <string name="store_his">常去分店</string>
+    <string name="receive_manage">收件人管理</string>
+    <string name="company_receipt_manage">公司統編管理</string>
+    <string name="questions">常見問題</string>
+    <string name="line">LINE</string>
+    <string name="Facebook">Facebook</string>
+    <string name="Instagram">Instagram</string>
+    <string name="yt">Youtube</string>
+    <string name="logout">登出</string>
+    <string name="product_detail">商品資訊</string>
+    <string name="prduct_infto">商品介紹</string>
+    <string name="more_product">更多商品</string>
+    <string name="add_to_cart">加入\n購物車</string>
+</resources>

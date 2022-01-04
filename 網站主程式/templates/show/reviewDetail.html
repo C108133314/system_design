@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    img.review_cover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    h3 {
+        position: relative;
+    }
+
+    h3 span {
+        background-color: white;
+        padding-right: 10px;
+    }
+
+    h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0.5em;
+        border-top: 3px solid black;
+        z-index: -1;
+    }
+
+    .tox-menubar{
+        display: none !important;
+    }
+
+    .my-float {
+        margin-top: 22px;
+    }
+
+    #content img{
+        max-width: 100%;
+    }
+
+    #add_comment image{
+        height: 350px ;
+        max-width: 100% !important;
+    }
+</style>
+<div class="container py-5 col-12 col-lg-8 mt-5">
+
+    <div class="row">
+        <div class="col-11 mx-auto mb-3">
+            <h3><span>編輯書籍推薦</span></h3>
+        </div>
+        <div class="col-lg-6 mx-lg-0 col-md-9 mx-md-auto col-12"
+            style="display: flex;justify-content: center;align-items: center;">
+
+            <img src="/media/{{ review.img }}" style="width: 70%;height: 400px;" class="review_cover" />
+        </div>
+        <div class="col-lg-6 mx-lg-0 col-md-9 mx-md-auto col-12 text-left">
+            <div class="col-12">
+                <!--
+                <div class="col-9 mx-auto  col-md-6 mx-md-auto col-lg-12 mx-lg-0">
+                    <p class="d-block my-0" style="font-size: x-large;">
+                        {{ review.title }}
+                    </p>
+                    <p class="d-block my-0" style="font-size: medium;">
+                        ‧ 作者: {{ review.author }}<br />
+                        ‧ 分類: {{ review.category }}<br />
+                        ‧ 出版商: {{ review.publisher }}<br />
+                        ‧ ISBN碼: {{ review.ISBN }}<br />
+                    </p>
+                </div>
+                -->
+                <div class="col-9 mx-auto mt-4 col-md-6 mx-md-auto col-lg-12 mx-lg-0">
+                    <p class="d-block my-0" style="font-size: x-large;">
+                        {{ review.title }}
+                    </p>
+                    <div class="container-fluid gx-0" style="font-size: x-small; color: grey">
+                        <div class="row my-3 gx-0">
+                            <div class="col-lg-3  col-5">作者:</div>
+                            <div class="col-lg-9 col-7 ">{{ review.author }}</div>
+                        </div>
+                        <div class="row my-3 gx-0">
+                            <div class="col-lg-3  col-5">分類:</div>
+                            <div class="col-lg-9 col-7">{{ review.category }}</div>
+                        </div>
+                        <div class="row my-3 gx-0">
+                            <div class="col-lg-3  col-5">出版商:</div>
+                            <div class="col-lg-9 col-7"> {{ review.publisher }}</div>
+                        </div>
+                        <div class="row my-3 gx-0">
+                            <div class="col-lg-3  col-5">ISBN碼:</div>
+                            <div class="col-lg-9 col-7">{{ review.ISBN }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-11 mx-auto mt-5">
+            <h3><span>推薦內容</span></h3>            
+            <div class="d-flex justify-content-between">
+                <h6 class="d-inline-block m-0">推薦人: {{ review.created_by }}</h6>
+                {% if review.created_by == request.user or request.user.is_superuser %}
+                
+                <a class="fa fa-edit d-inline-block my-auto" style="cursor: pointer;color:black" href = "/updateReview/{{ review.pk }}" ></a>
+                {% endif %}
+            </div>
+            <h6>內容:</h6>
+            <h6>{{ review.content|safe }}</h6>
+        </div>
+        <div class="col-11 mx-auto mt-3">
+            <h3><span>留言區</span></h3>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">我要留言</h5>
+                    <form method="POST" id="add_comment" action="/addComment/{{ review.pk }}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <textarea class="tinymce" name="content" id="content"></textarea>
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-primary">送出</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% for i in comments %}
+            <div class="d-flex justify-content-between">
+                <h6 class="d-inline-block m-0">使用者: {{ i.created_by }}</h6>
+                {% if i.created_by == request.user or request.user.is_superuser %}
+                    <a class="fa fa-edit d-inline-block my-auto" style="cursor: pointer;color:black" href = "/updateComment/{{ review.pk }}/{{ i.pk }}" ></a>
+                {% endif %}
+            </div>
+            <h6 class="mb-0 d-inline-block">內容:</h6><br>
+            <p class="d-inline-block mb-0 " id="content">{{ i.content|safe }}</p>
+            <div class="d-flex justify-content-end ">
+                <p class="d-block mb-0" style="font-size: smaller;">{{ i.created_at }}</p>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
+{% block js %}
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        height: "300px",
+        images_upload_url: '/upload_image/',
+        plugins: "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount spellchecker",
+        toolbar: " undo redo | image media | fullscreen ",
+        custom_undo_redo_levels: 10,
+        relative_urls : false,
+        remove_script_host : false,
+        convert_urls : true,
+        content_style: 'img {max-width: 100%;max-height: 60vh;width:auto;height:auto;}'
+    });
+    
+        //menubar: "file edit view insert format tools table help",
+        /*
+         " undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft " +
+            "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor " +
+            "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | " +
+            "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | " +
+            "a11ycheck ltr rtl | showcomments addcomment code"
+        */
+</script>
+{% endblock %}
